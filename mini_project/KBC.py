@@ -99,3 +99,5 @@ if yes_no.lower()=="yes":
 
 else:
   print("\nok losers can't make money anyway\t:)\thave a nice future\t:)\t ")
+
+#not able to update dashboard every time I won it always print in new line hope I will learn to do that
