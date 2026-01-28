@@ -1,0 +1,29 @@
+# printing cubes of the numbers 
+numbers=list(map(int,input().split()))
+cubes=[x*x*x for x in numbers ]
+print(cubes)
+
+# pprinting odd
+num=list(map(int,input().split()))
+odd=[x for x in num if x%2!=0]
+print(odd)
+
+#taking two list and making dictionary using zip
+country=["Berlin","heilsinki","tokyo"]
+rating=[5,4,1]
+dict(zip(country,rating))
+           #or by user input
+list_1=list(map(int,input().split()))
+list_2=list(map(int,input().split()))
+dict(zip(list_1,list_2))      
+
+#taking list and making dictionary where key is number and square is value
+number=list(map(int,input().split()))
+square=list(x*x for x in number)
+dict(zip(number,square))
+
+#take sentence and make list of words using split and comprehension
+
+sentence=list(map(str,input().split()))
+words=[x for x in sentence]
+print(words)
