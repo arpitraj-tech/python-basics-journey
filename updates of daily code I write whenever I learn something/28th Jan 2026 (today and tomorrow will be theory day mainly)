@@ -27,3 +27,11 @@ dict(zip(number,square))
 sentence=list(map(str,input().split()))
 words=[x for x in sentence]
 print(words)
+
+#finding frequency using .get
+nums=list(map(int,input().split()))
+freq={}
+
+for x in nums:
+    freq[x]=freq.get(x,0)+1
+print(freq)
