@@ -25,3 +25,17 @@ freq={ }
 for I in numbers:
     freq[I]=freq.get(I,0)+1
 print (freq)    
+
+# cook your dish here ############     ALJMP ###############
+t=int(input())
+for I in range(t):
+    n=int(input())
+    if n%2!=0: #odd
+       print(int((n//2)+1))
+    else :
+        print(int(n/2))
+        
+# frog jumps n-1 like if on 6th position it will jump 5 times means think it like 
+# if frog  is  initially at 5 means right most corner then it will jump left most then 
+#again right but it can't jump to the same position twice 
+#so 1st it was on 6th then 1 then 5 then 2 then 4 then 3 and now all is filled so last position is 3 
