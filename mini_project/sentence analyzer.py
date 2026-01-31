@@ -1,4 +1,4 @@
-print("Word analyzer\n\n".center(140))
+print("Sentence analyzer\n\n".center(140))
 
 sentence=input("type your sentence : ").split()
 
