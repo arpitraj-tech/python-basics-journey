@@ -4,31 +4,24 @@ password=list(input("\n\ntype your password : ") )
 print("\n")
 count=0
 if len(password)>=8:
-  count+=0.39
-else:
-  count=0
+  count+=0.5
+if len(password)>10:
+  count+=0.8
 
-for I in password:
-  if I.upper() in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
-    count+=0.12
-  if I.isupper() :
-    count+=0.80
-  if I.islower():
-    count+=0.19
-  if I.isdigit():
-    count+=0.49
-  if I in "!@#$%^&*":
-    count+=0.70
-  if I.isspace():
-    count+=0.71
+if any(I.isupper() for I in password) :
+  count+=0.6
+if any(I.islower() for I in password):
+  count+=0.6
+if any(I.isdigit() for I in password) :
+  count+=1
+if any(I in "!@#$%^&*" for I in password):
+  count+=1
+if any(I.isspace() for I in password[1:-1]):
+  count+=0.5
 
-if count<1.5:
-  print("Your password is very weak")
-elif count<=3:
-  print("your password is weak")
-elif count<5.5:
+if count<=2:
+  print("Your password is weak")
+elif count<=4:
   print("your password strength is moderate")
-elif count<=7.3:
-  print("your password strength is strong")
 else:
-  print("your password strength is very strong")  
+  print("your password strength is strong")
