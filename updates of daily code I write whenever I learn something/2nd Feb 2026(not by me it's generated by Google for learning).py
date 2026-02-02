@@ -105,3 +105,45 @@ for char in string_with_duplicates:
     if char not in string_without_duplicates:
         string_without_duplicates.append(char)
 print(f"String with duplicates removed: {''.join(string_without_duplicates)}")
+
+"""
+CodeChef: The Lead Game (TLG) Solution
+Problem Statement: The problem asks us to simulate a game played between two players, Player 1 and Player 2. In each round, both players score a certain number of points. We need to find the maximum lead obtained by any player at the end of any round and declare the player who had this maximum lead as the winner.
+
+Approach:
+
+Initialize score1, score2, max_lead, and winner to 0. max_lead will store the largest lead found so far, and winner will store the player (1 or 2) who achieved that lead.
+Iterate through each round of the game.
+In each round, read the scores of Player 1 and Player 2 for that round.
+Add these scores to their respective total scores (score1 and score2).
+Calculate the current lead for Player 1 over Player 2 (lead1 = score1 - score2).
+Calculate the current lead for Player 2 over Player 1 (lead2 = score2 - score1).
+Compare lead1 and lead2 to find the absolute lead in this round.
+If the current absolute lead is greater than max_lead, update max_lead and set the winner to the player who currently has the lead.
+After all rounds, print the winner and max_lead.
+"""
+# cook your dish here
+T = int(input())
+
+score1 = 0
+score2 = 0
+max_lead = 0
+winner = 0
+
+for _ in range(T):
+    s1, s2 = map(int, input().split())
+    score1 += s1
+    score2 += s2
+
+    current_lead = abs(score1 - score2)
+
+    if current_lead > max_lead:
+        max_lead = current_lead
+        if score1 > score2:
+            winner = 1
+        else:
+            winner = 2
+
+print(winner, max_lead)
+
+"""above was also by Google not solved by me"""
