@@ -181,4 +181,106 @@ for _ in range(T):
 
 print(winner, max_lead)
 
+'''
+##   DPOLY        
+
+Input Format
+First line will contain 
+T
+T, number of test cases. Then the test cases follow.
+First line of each test case contains of a single integer 
+N
+N - the number of terms in the polynomial.
+Second line of each test case contains of 
+N
+N space-separated integers - the 
+i
+t
+h
+i 
+th
+  integer
+sample input:
+4
+1
+5
+2
+-3 3
+3
+0 0 5
+4
+1 2 4 0
+output:
+0
+1
+2
+2
+
+'''
+#cook your dish here
+for i in range(int(input())):
+    n=int(input())
+    c=list(map(int,input().split()))
+    degree=0
+    for i in range(len(c)):
+        if c[i] != 0 and i>degree:
+            degree=i 
+    print(degree)
+
+'''
+##            NUM239
+Vasya likes the number 
+239
+239. Therefore, he considers a number pretty if its last digit is 
+2
+2, 
+3
+3 or 
+9
+9.
+
+Vasya wants to watch the numbers between 
+L
+L and 
+R
+R (both inclusive), so he asked you to determine how many pretty numbers are in this range. Can you help him?
+
+Input
+The first line of the input contains a single integer 
+T
+T denoting the number of test cases. The description of 
+T
+T test cases follows.
+The first and only line of each test case contains two space-separated integers 
+L
+L and 
+R
+R.
+Output
+For each test case, print a single line containing one integer — the number of pretty numbers between 
+L
+L and 
+R
+R.
+
+input sample
+2
+1 10
+11 33
+output
+3
+8
+
+'''
+# cook your dish here
+t=int(input())
+for i in range(t):
+    c=0
+    l,r=map(int,input().split())
+    for i in range(l,r+1):
+        if i%10 in (2,3,9):
+            c+=1
+    print(c)
+
+
 """above was also by Google not solved by me"""
