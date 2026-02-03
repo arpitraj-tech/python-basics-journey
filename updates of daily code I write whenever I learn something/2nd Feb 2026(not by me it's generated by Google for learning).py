@@ -57,10 +57,45 @@ else:
 list_to_rotate_input = input("Enter elements for the list to rotate (space-separated): ").split()
 k_input = int(input("Enter the number of positions to rotate: "))
 
-k = k_input % len(list_to_rotate_input)
+k = k_input % len(list_to_rotate_input)                      
 rotated_list = list_to_rotate_input[k:] + list_to_rotate_input[:k]
 print(f"Original list: {list_to_rotate_input}")
 print(f"Rotated list: {rotated_list}")
+'''
+In Python, the % symbol is the Modulo operator, and it gives you the Remainder of a division.
+​It is not "mode" (which is a statistics term for the most frequent number).
+​Using your example: "Python" (k=2)
+​The string "Python" has 6 letters. When you run k = 2 % 6, Python does the following math:
+​Divide: 2 \div 6 = 0
+​Calculate what's left over: Since 6 goes into 2 zero times, the entire 2 is left over.
+​Result: The remainder is 2.
+​So, k remains 2.
+​Why use the Remainder logic?
+​The "Remainder" trick is used to "wrap around" numbers. Look at what happens if k is larger than the string length:
+​If k = 6: 6 \div 6 = 1 with 0 remainder. (k=0) \rightarrow No rotation.
+​If k = 7: 7 \div 6 = 1 with 1 remainder. (k=1) \rightarrow Rotates by 1.
+​If k = 8: 8 \div 6 = 1 with 2 remainder. (k=2) \rightarrow Rotates by 2.
+​Summary: The % sign ensures that no matter how big the number the user types in, it will always be converted into a valid "remainder" that fits inside the length of your list or string
+In Python, 2 % 6 will give you 2.
+​Here is why:
+​The Operator: The % symbol is the modulo operator, which calculates the remainder after division.
+​The Math: * You are trying to divide 2 by 6.
+​6 goes into 2 zero times (2 // 6 = 0).
+​Since it went in zero times, the entire 2 is left over.
+​The Result: Because 2 is the "leftover" part, the remainder is 2.
+​Simple Rule of Thumb:
+​Whenever the first number is smaller than the second number (like 2 < 6), the result of the modulo will always be the first number itself.
+​1 % 6 = 1
+​2 % 6 = 2
+​5 % 6 = 5
+​6 % 6 = 0 (Because 6 goes into 6 perfectly with nothing left over)
+In integer math (like Python's % operator), the remainder is always a whole number, not a decimal.
+​When you divide 2 by 6:
+​Quotient: 6 goes into 2 0 times.
+​Product: 0 \times 6 = 0.
+​Remainder: 2 - 0 = \mathbf{2}.
+​The "0.333..." result you are thinking of is the decimal quotient, which happens only if you continue the division into fractions. In coding, the modulo operator stops once it finds the leftover whole number.
+'''
 
 # Check palindrome without slicing
 palindrome_string = input("Enter a string to check for palindrome: ")
