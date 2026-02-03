@@ -1,4 +1,5 @@
 # making sign up and login system and then after logging assigning some task which user can do
+#this was made with mobile on Google colab 
 #(simple version now no screen refresh or text color or sound or images or anything as making it through mobile and Google colab not in vs code or pycharm so after I get my laptop after 2 or 3 months then I will remake this with all features and more advance like in kbc in mini project it just the same question one with no lifeline etc I am adding that here only but later it will give random 7 question from the set of many question which will make it more interesting every time u play and post it to the project file on git hub but for now I will post this on the mini project section not the project)
 """Ask user:
 
