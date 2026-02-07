@@ -9,6 +9,7 @@ while learning programming from scratch.
 - Prime number checker
 - String reverse
 - KBC game project
+- console_app_suite
 - More coming daily...
 
 This is part of my learning journey towards becoming a strong software engineer.
