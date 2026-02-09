@@ -35,6 +35,13 @@ if "yes" in I:
 else:
   print("no it not has any common elements")
 
+''' OR'''
+
+if set(list_1)&set(list_2):
+    print("it has common")
+else:
+    print("NO COMMON")
+
 #remove duplicates while keeping order
 list_1=list(map(str,input().split()))
 non_list=[]
@@ -52,10 +59,10 @@ print(freq)
 
 # find first non repeating elements 
 string=list(map(str,input().split()))
-a=len(string)
-for x in range(len(string)):
-  if string[x] not in string[x+1:]:
-   print(string[x])
+
+for x in string:
+  if string.count(x) == 1:
+   print(x)
    break
 
 # reverse a list without slicing 
