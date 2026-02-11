@@ -32,6 +32,20 @@ for t in range(int(input())):
         if current>maximum:
             maximum=current
     print(maximum)
+    
+# cook your dish here
+
+'''DISCOOKIE''' 
+for t in range(int(input())):
+    n, m = map(int, input().split())
+
+    if m < n:
+        sec = n - m
+    else:
+        remainder = m % n
+        sec = min(remainder, n - remainder)
+
+    print(sec)
 
 '''self practice'''
 
