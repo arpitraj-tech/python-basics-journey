@@ -66,6 +66,7 @@ for x in string:
     non.remove(x)
 print(non)
 
+
 # rotate list by k
 
 list_1= list(map(str,input().split()))
