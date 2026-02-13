@@ -21,3 +21,26 @@ for t in range(int(input())):
     b=result.count("n")
     c=result.count("d")
     print(60*x) if a>b else print(55*x) if a==b else print(40*x)
+
+# cook your dish here
+'''CEILRCPT'''
+"""IMPORTANT"""
+for t in range(int(input())):
+    p = int(input())
+
+    x = (1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048)
+    m = list(x)
+
+    m.sort(reverse=True) #it's important so that largest no. iis considered first as minimum is required 
+
+    count = 0
+    remaining = p #set variable name
+
+    for x in m:
+        if remaining == 0:
+            break
+        else:
+          count += remaining//x    #it tells how many of this no. iis used to make it
+          remaining %= x     #it again go to loop by changing the remaining variable value it's like using recursion 
+
+    print(count)
