@@ -30,6 +30,7 @@ The exploration of Python's `math` module revealed a comprehensive set of functi
     *   `math.ceil(x)`: Returns the smallest integer greater than or equal to $x$.
     *   `math.floor(x)`: Returns the largest integer less than or equal to $x$.
     *   `math.fabs(x)`: Returns the absolute value of $x$.
+    *   'math.lcm(integers): return least common multiple. 
     *   `math.gcd(a, b)`: Returns the greatest common divisor of $a$ and $b$.
     *   `math.perm(n, k)`: Returns the number of ways to choose $k$ items from $n$ items without repetition and with order (permutations).
     *   `math.comb(n, k)`: Returns the number of ways to choose $k$ items from $n$ items without repetition and without order (combinations).
@@ -45,6 +46,7 @@ The exploration of Python's `math` module revealed a comprehensive set of functi
     *   `math.degrees(x)`: Converts angle $x$ from radians to degrees.
     *   `math.radians(x)`: Converts angle $x$ from degrees to radians.
     *   `math.asin(x)`, `math.acos(x)`, `math.atan(x)`: Return the inverse sine, inverse cosine, and inverse tangent of $x$ (in radians), respectively.
+    *   'math.dist(p,q): dist between 2 points p and q
     *   `math.hypot(*coordinates)`: Returns the Euclidean norm of a vector or the distance from the origin to a point.
 *   **Other Special Functions:**
     *   `math.factorial(x)`: Returns the factorial of $x$.
